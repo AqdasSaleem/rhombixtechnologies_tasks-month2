@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+#sidebar {
+  width: 230px;
+  background: #1a1a1a;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+#sidebar h2 {
+  color: #00ffe7;
+  margin-bottom: 30px;
+}
+
+#sidebar nav ul {
+  list-style: none;
+}
+
+#sidebar nav ul li {
+  margin: 20px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+#sidebar nav ul li:hover {
+  color: #00ffe7;
+}
+
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  background: #00ffe7;
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.auth-buttons button:hover {
+  background: #00d4c0;
+}
+
+/* MAIN CONTENT */
+#main-content {
+  margin-left: 230px;
+  padding: 30px;
+  width: 100%;
+}
+
+/* APP STYLES */
+#app {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #00ffe7;
+}
+
+.search-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input, select {
+  flex: 1;
+  padding: 10px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 8px;
+}
+
+/* PLAYLIST */
+#playlist-container h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 5px;
+}
+
+#playlist {
+  list-style: none;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+#playlist li {
+  background: #1a1a1a;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+#playlist li:hover {
+  background: #272727;
+}
+
+/* PLAYER */
+#player {
+  margin-top: 40px;
+  padding: 20px;
+  background: linear-gradient(to right, #1f1f1f, #2c2c2c);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,255,231,0.2);
+}
+
+.album-art {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+#now-playing {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.controls button {
+  background: #00ffe7;
+  color: #000;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.controls button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #00ffe7;
+}
+
+.controls input[type=range] {
+  flex: 1;
+  accent-color: #00ffe7;
+}
+
